@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-Iinclude", // Diretório de cabeçalhos, ajuste conforme necessário
+                "src/main.c", 
+                "src/huffman.c", 
+                "src/priority_queue.c", 
+                "src/tree.c",
+                "-o",
+                "huffman-archiver" // Nome do arquivo de saída
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Compiling C code"
+        }
+    ]
+}
